@@ -29,7 +29,7 @@ window.CONTENT = {
     name: "SHLOK.",
     // first entry shows during the build; after it, the line types through the rest
     roles: ["AI & Automation Builder", "JEE Aspirant", "FPV Pilot", "CTF Designer", "Local-first AI Nerd", "Raspberry Pi Tinkerer"],
-    blurb: "JEE by day. By night I build <strong>an AI that runs my computer</strong>, <strong>CTFs that wreck hackathon teams</strong> and <strong>drones people actually pay for</strong>.",
+    blurb: "JEE by day. By night I build <strong>an AI that runs my computer</strong>, <strong>CTFs that wreck hackathon teams</strong> and <strong>drones that hit 250 km/h and fly themselves home</strong>.",
     ctaPrimary: { label: "See the builds →", href: "#projects" },
     ctaSecondary: { label: "Get in touch", href: "#contact" },
     stats: [                       // numbers count up after the build
@@ -42,13 +42,13 @@ window.CONTENT = {
       alt: "Shlok Sinha pointing at the camera, wearing a ./ascendant.sh T-shirt",
       caption: "● CURRENTLY: JARVIS PHASE 7",
       floatTop: "CLASS 12 · JEE",
-      floatSide: "FPV ✈ PAID BUILD"
+      floatSide: "FPV ✈ 250 KM/H"
     },
     // right column of the hero: first one is the big featured card
     flagships: [
       { n: "01.", badge: "PHASE 7 · LIVE", title: "J.A.R.V.I.S.", desc: "Local-first AI assistant on my own GPU. Routes to 7+ AI providers, remembers, talks, and now drives a browser.", tags: ["Python", "Ollama", "Voice"] },
       { n: "02.", badge: "HOSTED", title: "Ascendant 2026", desc: "Ran a school hackathon + wrote its 15-challenge CTF." },
-      { n: "03.", badge: "PAID BUILD", title: "Commercial FPV", desc: "Self-taught FPV, built a drone for video production." }
+      { n: "03.", badge: "RTH · 250 KM/H", title: "Autonomous FPV", desc: "Self-built FPV drone with autonomous return-to-home, tops out at 250 km/h." }
     ],
     marquee: ["Python", "JavaScript", "Ollama", "Claude", "Gemini", "ChromaDB", "Whisper", "React", "Tauri", "Textual", "Alpaca API", "Flask", "MySQL", "Node.js", "Raspberry Pi", "Apps Script", "WebGL", "FPV", "Betaflight Blackbox", "Obsidian", "Git"]
   },
@@ -67,7 +67,7 @@ window.CONTENT = {
       { year: "Sep '26", title: "JARVIS v1", desc: "Local-first assistant with multi-provider routing, zero paid keys required." },
       { year: "Aug '26", title: "Paper Desk + Check-in Bot", desc: "Paper-trading bot with walk-forward backtests; a mood check-in chatbot for school." },
       { year: "Jul '26", title: "Ascendant 2026", desc: "Hosted a school hackathon: websites, a 3-level CTF, 2-day logistics, school + sponsor outreach." },
-      { year: "'25", title: "Commercial FPV build", desc: "After Class 10: taught myself FPV, sourced parts, built a drone for video production — and got paid." },
+      { year: "'25", title: "Autonomous FPV build", desc: "After Class 10: taught myself FPV, sourced parts, built a 250 km/h drone with autonomous return-to-home." },
       { year: "'19", title: "First code", desc: "Minecraft course, then summer coding challenges and an intro AI course." }
     ]
   },
@@ -90,8 +90,8 @@ window.CONTENT = {
       },
       {
         title: "FPV Drone", year: "2026", category: "Hardware",
-        desc: "Taught myself FPV after Class 10, researched and sourced every part through specialist builders and communities, and built a drone for photo/video production work — a paid build. Still tuning it with Betaflight blackbox logs.",
-        tags: ["FPV", "Electronics", "Betaflight", "Sourcing"], link: "#"
+        desc: "Taught myself FPV after Class 10, researched and sourced every part through specialist builders and communities, and built a drone for photo/video production work: autonomous return-to-home (RTH) and a 250 km/h top speed. Still tuning it with Betaflight blackbox logs.",
+        tags: ["FPV", "RTH", "250 km/h", "Betaflight"], link: "#"
       },
       {
         title: "Ascendant 2026", year: "2026", category: "Web",
