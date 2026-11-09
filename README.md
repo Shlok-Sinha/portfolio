@@ -40,7 +40,7 @@ Static site, no build step.
 - `data-layer="headline"` — like text, for the giant outlined word.
 
 ## Controls (bottom pill)
-Pause · speed (1× / 2× / 4× / 0.5×) · Touring (auto-scrolls through every section while it builds; stops as soon as you scroll yourself) · Follow (agents chase the mouse) · Sound (Web Audio blips, off by default) · Replay · Skip · × hide.
+Pause · speed (1× / 2× / 4× / 0.5×) · Touring (auto-scrolls through every section while it builds; pauses briefly if you scroll yourself, then carries on) · Follow (agents chase the mouse) · Sound (Web Audio blips, off by default) · Replay · Skip · × hide.
 
 ## What the agents do
 1. Scan: swarm orbits the logo.
@@ -55,7 +55,7 @@ Pause · speed (1× / 2× / 4× / 0.5×) · Touring (auto-scrolls through every 
 - Add `?nobuild` to the URL.
 - Visitors with "reduce motion" enabled (e.g. Windows "Animation effects" off) still see the build,
   at normal speed; the agents just stop roaming once it finishes.
-- Busier/calmer build: agent count is in `js/swarm/engine.js` (`innerWidth < 700 ? 8 : 14`).
+- Busier/calmer build: agent count is in `js/swarm/engine.js` (`innerWidth < 700 ? 6 : 12`).
 
 ## Files
 ```

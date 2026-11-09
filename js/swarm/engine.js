@@ -22,7 +22,7 @@
 
   const st = {
     phase: 'scan', now: 0, speed: 1, paused: false, follow: true,
-    tour: true, tourPref: true, tourIdle: 0, scrollAnim: null, tourDone: false,
+    tour: true, tourPref: true, tourIdle: 0, scrollAnim: null, tourDone: false, tourHold: 0,
     agents: [], groups: [], all: [], timers: [], guides: [],
     chrome: 0,            // fade 0..1 for rulers + layout guides
     scanEnd: 0, last: 0,
@@ -51,7 +51,7 @@
     st.groups = groups;
     st.all = all;
 
-    const n = innerWidth < 700 ? 8 : 14;
+    const n = innerWidth < 700 ? 6 : 12;
     const cx = innerWidth / 2, cy = innerHeight / 2;
     for (let i = 0; i < n; i++) {
       const a = Math.random() * Math.PI * 2, r = Math.max(innerWidth, innerHeight) * (0.55 + Math.random() * 0.2);
@@ -72,8 +72,8 @@
     addEventListener('pointermove', e => { st.mouse.x = e.clientX; st.mouse.y = e.clientY; st.mouse.t = st.now; }, { passive: true });
     document.documentElement.addEventListener('mouseleave', () => { st.mouse.x = -9999; st.mouse.t = -1e9; });
 
-    // Any manual scrolling hands control back to the visitor
-    const stopTour = () => { if (st.tour) { st.tour = false; st.scrollAnim = null; SW.hud.sync(st); } };
+    // Manual scrolling only pauses the tour briefly; it picks up again on its own
+    const stopTour = () => { st.scrollAnim = null; st.tourHold = st.now + 2500; st.tourIdle = 0; };
     addEventListener('wheel', stopTour, { passive: true });
     addEventListener('touchmove', stopTour, { passive: true });
     addEventListener('keydown', e => {
@@ -411,10 +411,12 @@
       if (p >= 1) st.scrollAnim = null;
       return;
     }
-    if (!st.tour || st.phase !== 'build' || st.tourDone) return;
-    if (st.agents.some(a => a.mode !== 'roam')) { st.tourIdle = 0; return; }
+    if (!st.tour || st.phase !== 'build' || st.tourDone || st.now < st.tourHold) return;
+    // move on once most of the swarm has run out of on-screen work (don't wait for stragglers)
+    const idle = st.agents.filter(a => a.mode === 'roam').length;
+    if (idle < Math.ceil(st.agents.length * 0.6)) { st.tourIdle = 0; return; }
     st.tourIdle += dt * 1000;
-    if (st.tourIdle < 450) return;
+    if (st.tourIdle < 300) return;
     st.tourIdle = 0;
 
     // 1) unfinished work in a section that's being built, but off screen
@@ -428,7 +430,10 @@
         if (scrollTo(window.scrollY + r.top - innerHeight * 0.22)) return;
       }
     }
-    // 2) next section that hasn't started
+    // 2) next section that hasn't started, but only once nothing on screen is still waiting to start
+    const waiting = st.groups.some(g => g.state === 'building' &&
+      g.layers.some(L => L.state === 'pending' && onScreen(L.el.getBoundingClientRect())));
+    if (waiting) return;
     const next = st.groups.find(g => g.state === 'pending');
     if (next) { scrollTo(window.scrollY + next.el.getBoundingClientRect().top - 40); return; }
     // 3) everything built: go back to the top and stop touring
@@ -540,6 +545,8 @@
   }
 
   /* ---------------- controls ---------------- */
+  // test hook: advance the simulation by `dt` seconds without waiting for animation frames
+  E.step = dt => { st.now += dt * 1000; runTimers(); update(dt); };
   E.togglePause = () => (st.paused = !st.paused);
   E.cycleSpeed = () => {
     const speeds = [1, 2, 4, 0.5];
