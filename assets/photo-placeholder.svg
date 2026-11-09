@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" width="480" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#C6FF3D"/>
+      <stop offset="1" stop-color="#7FB800"/>
+    </linearGradient>
+    <linearGradient id="fig" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#151518"/>
+      <stop offset="1" stop-color="#0B0B0C"/>
+    </linearGradient>
+    <pattern id="lines" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="1" fill="#000" opacity=".08"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="600" fill="url(#bg)"/>
+  <rect width="480" height="600" fill="url(#lines)"/>
+  <!-- silhouette -->
+  <g fill="url(#fig)">
+    <circle cx="240" cy="235" r="92"/>
+    <path d="M240 150c-70 0-112 40-108 96 2 22 10 34 10 34s-6-62 40-80c30-12 70-6 100 6 40 16 34 74 34 74s12-14 12-40c0-52-30-90-88-90z"/>
+    <path d="M70 600c0-110 70-196 170-196s170 86 170 196z"/>
+    <rect x="212" y="310" width="56" height="80" rx="20"/>
+  </g>
+  <text x="240" y="70" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#0B0B0B" opacity=".55" letter-spacing="3">YOUR PHOTO HERE</text>
+</svg>

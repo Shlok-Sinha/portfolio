@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shlok Sinha — AI &amp; Automation Builder</title>
+  <meta name="description" content="Portfolio of Shlok Sinha — Class 12 student building local-first AI, trading bots, CTFs and FPV drones." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/build-states.css" />
+  <!-- Hide layers before first paint so nothing flashes before the swarm builds it -->
+  <script>document.documentElement.classList.add('js-build');</script>
+</head>
+<body>
+  <canvas id="aurora-canvas" aria-hidden="true"></canvas>
+
+  <!-- Dock nav (filled by render.js) -->
+  <header id="dock-wrap" data-section="dock"></header>
+
+  <!-- Page sections (filled by render.js) -->
+  <main id="app"></main>
+
+  <!-- Boot logo shown while agents scan the page -->
+  <div id="boot" aria-hidden="true"><span id="boot-logo">SS</span></div>
+
+  <!-- Swarm overlay: cursors, wireframes, dimension chips -->
+  <canvas id="swarm-canvas" aria-hidden="true"></canvas>
+
+  <!-- HUD control pill -->
+  <div id="hud" class="hud" role="region" aria-label="Build controls">
+    <span class="hud-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+    <span class="hud-text" id="hud-text">Scanning page…</span>
+    <span class="hud-bar" aria-hidden="true"><span id="hud-bar-fill"></span></span>
+    <button type="button" id="hud-pause" aria-label="Pause build">Pause</button>
+    <button type="button" id="hud-speed" aria-label="Change build speed">1×</button>
+    <button type="button" id="hud-tour" aria-label="Toggle auto tour through the page" aria-pressed="true">Touring</button>
+    <button type="button" id="hud-follow" aria-label="Toggle agents following mouse" aria-pressed="true">Follow</button>
+    <button type="button" id="hud-sound" aria-label="Toggle sound" aria-pressed="false">Sound off</button>
+    <button type="button" id="hud-replay" aria-label="Replay build">Replay</button>
+    <button type="button" id="hud-skip" aria-label="Skip build">Skip</button>
+    <button type="button" id="hud-close" class="hud-close" aria-label="Hide controls">×</button>
+  </div>
+  <button type="button" id="hud-reopen" class="hud-reopen" aria-label="Show build controls">◎</button>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <div class="noscript">
+      <h1>Shlok Sinha — AI &amp; Automation Builder</h1>
+      <p>This site builds itself with JavaScript. Enable it to see the live build.</p>
+    </div>
+  </noscript>
+
+  <script src="content.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/aurora.js"></script>
+  <script src="js/hero-fx.js"></script>
+  <script src="js/swarm/audio.js"></script>
+  <script src="js/swarm/typer.js"></script>
+  <script src="js/swarm/layers.js"></script>
+  <script src="js/swarm/agent.js"></script>
+  <script src="js/swarm/overlay.js"></script>
+  <script src="js/swarm/hud.js"></script>
+  <script src="js/swarm/engine.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

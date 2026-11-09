@@ -1,0 +1,55 @@
+/*
+ * Build states — applied by the swarm engine to every [data-layer] element.
+ *   (no class)  pending: invisible, layout space kept
+ *   .bs-block   grey skeleton block (box/image) or grey bar (text)
+ *   .bs-type    text being typed; .ch spans revealed one by one
+ *   .bs-done    final, real styles
+ * Only active while <html> has .js-build (removed for reduced-motion / ?nobuild).
+ */
+.js-build [data-layer] {
+  opacity: 0;
+  transition: opacity .25s ease, background-color .45s ease, border-color .45s ease,
+              color .45s ease, box-shadow .45s ease;
+}
+.js-build [data-layer].bs-block,
+.js-build [data-layer].bs-type,
+.js-build [data-layer].bs-done { opacity: 1; }
+
+/* Box / image skeleton */
+.js-build [data-layer="box"].bs-block,
+.js-build [data-layer="image"].bs-block {
+  background: var(--block) !important;
+  background-image: none !important;
+  border-color: #3A3A43 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+.js-build [data-layer="box"].bs-block > i { opacity: 0; }
+.js-build img[data-layer="image"].bs-block { opacity: 1; object-position: -99999px 0; }
+
+/* Text skeleton bar */
+.js-build [data-layer="text"].bs-block,
+.js-build [data-layer="headline"].bs-block {
+  color: transparent !important;
+  -webkit-text-stroke-color: transparent !important;
+  background: var(--block-text) !important;
+  border-radius: 4px;
+}
+.js-build [data-layer="text"].bs-block *,
+.js-build [data-layer="headline"].bs-block * { color: transparent !important; }
+
+/* Typing */
+.js-build .bs-type .ch { opacity: 0; }
+.js-build .bs-type .ch.on { opacity: 1; }
+
+/* Section background while being built */
+/* full-bleed grey: sections are max-width, so extend the color sideways with a clipped shadow */
+.js-build [data-section]:not(#dock-wrap) {
+  clip-path: inset(0 -100vmax);
+  transition: background-color .8s ease, box-shadow .8s ease;
+}
+.js-build [data-section].sec-building:not(#dock-wrap) {
+  background-color: var(--build-bg);
+  box-shadow: 0 0 0 100vmax var(--build-bg);
+}
+.js-build [data-section].sec-done { background-color: transparent; box-shadow: 0 0 0 100vmax transparent; }
