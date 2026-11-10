@@ -33,7 +33,7 @@ window.CONTENT = {
     ctaPrimary: { label: "See the builds →", href: "#projects" },
     ctaSecondary: { label: "Get in touch", href: "#contact" },
     stats: [                       // numbers count up after the build
-      { value: "11", label: "Projects shipped" },
+      { value: "12", label: "Projects shipped" },
       { value: "15", label: "CTF challenges designed" },
       { value: "0", label: "Paid keys Auren needs" }
     ],
@@ -101,6 +101,12 @@ window.CONTENT = {
         links: [{ label: "Play the CTF", href: "https://ascendantctf.vercel.app/" }, { label: "Event site", href: "https://www.ascendant2026.tech/" }]
       },
       {
+        title: "Ethical Hacking & Cyber Security", year: "Ongoing", category: "Security",
+        desc: "Several ethical hacking courses, starting with Udemy's Learn Ethical Hacking From Scratch, all practised in my own lab (Kali Linux VMs and a Raspberry Pi rig) on machines and networks I own. Network: monitor mode, packet sniffing, deauth, cracking WEP / WPA / WPA2 handshakes, then ARP spoofing, man-in-the-middle with bettercap and Wireshark, DNS spoofing. Systems: recon with Nmap, exploiting services with Metasploit, client-side backdoors and social-engineering awareness, post-exploitation with Meterpreter. Web: information gathering, file upload and code execution flaws, LFI / RFI, SQL injection, XSS, scanning with OWASP ZAP. And the other side: how to detect and defend against each attack. I turned it into the 15-challenge Ascendant CTF.",
+        tags: ["Kali Linux", "Wireshark", "Nmap", "Metasploit", "Burp / ZAP", "SQLi / XSS"],
+        links: [{ label: "The course", href: "https://www.udemy.com/course/learn-ethical-hacking-from-scratch/" }, { label: "My CTF", href: "https://ascendantctf.vercel.app/" }]
+      },
+      {
         title: "Raspberry Pi Lab", year: "Ongoing", category: "Security",
         desc: "A pocket hacking rig running Kali Linux for practising Wi-Fi and network attacks on my own network, a Pi-hole that blocks ads for the whole house, a home server / NAS, and a Pi camera + sensor build. Also a Node.js website hosted on the Pi that switches its pins and LEDs from any browser.",
         tags: ["Raspberry Pi", "Kali Linux", "Pi-hole", "Node.js"], link: "#"
@@ -145,7 +151,8 @@ window.CONTENT = {
       { name: "Languages", items: ["Python", "JavaScript", "HTML / CSS", "SQL"] },
       { name: "AI & Data", items: ["Ollama", "Claude", "Gemini", "ChromaDB", "Whisper", "scikit-learn", "VADER"] },
       { name: "Web & Backend", items: ["Flask", "MySQL", "Node.js", "Tauri + React", "Apps Script", "WebGL"] },
-      { name: "Hardware & Security", items: ["FPV / Blackbox", "Raspberry Pi", "Arduino", "Kali Linux", "Git", "Obsidian"] }
+      { name: "Hardware & Tools", items: ["FPV / Blackbox", "Raspberry Pi", "Arduino", "Git", "Obsidian"] },
+      { name: "Security", items: ["Kali Linux", "Wireshark", "Nmap", "Metasploit", "bettercap", "OWASP ZAP", "Aircrack-ng", "SQLi / XSS"] }
     ]
   },
 
