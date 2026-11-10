@@ -125,7 +125,7 @@ window.CONTENT = {
       {
         title: "Android Apps (MIT App Inventor)", year: "2020–21", category: "Apps",
         desc: "Where it started: 20+ Android apps built in lockdown. Best of them: an All-in-One app with video calling through join / create meeting codes on a web page I hosted myself, plus games and settings; Find Me, which reads incoming texts aloud and auto-replies with the phone's GPS location; FlappyCopter, a 750-block side-scroller with collisions and a saved high score; a multi-tool that translates text, listens to your speech and speaks back, with a to-do list and a country / capital / currency lookup; a diary locked behind the fingerprint sensor; plus reminders with real alarms, a paint app that shares drawings, a step counter and a xylophone that records what you play.",
-        tags: ["App Inventor", "Android", "GPS + SMS", "Speech", "Games"], link: "#"
+        tags: ["App Inventor", "Android", "GPS + SMS", "Speech", "Games"], link: "https://github.com/Shlok-Sinha/app-inventor-apps"
       },
       {
         title: "Paper Desk", year: "2026", category: "Finance",
