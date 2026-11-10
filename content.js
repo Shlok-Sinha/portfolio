@@ -96,19 +96,19 @@ window.CONTENT = {
         tags: ["FPV", "RTH", "250 km/h", "Betaflight"], link: "#"
       },
       {
-        title: "Ascendant 2026", year: "2026", category: "Web",
+        wide: true, title: "Ascendant 2026", year: "2026", category: "Web",
         desc: "I ran the Ascendant 2026 school hackathon — 3-hour event, 2 days of logistics, school + sponsor outreach — and built its websites and a 3-level, 15-challenge, 2950-point story CTF retelling Daedalus & Icarus as a spy thriller — JWTs, stego, ciphers, IDOR, and a finale that leaves the site. Flags are hashed and re-checked server-side. Plus a repo tracker that flags commits made before the problem reveal.",
         tags: ["HTML/CSS/JS", "CTF", "Apps Script", "Event lead"],
         links: [{ label: "Play the CTF", href: "https://ascendantctf.vercel.app/" }, { label: "Event site", href: "https://www.ascendant2026.tech/" }]
       },
       {
-        title: "Ethical Hacking & Cyber Security", year: "Ongoing", category: "Security",
+        wide: true, title: "Ethical Hacking & Cyber Security", year: "Ongoing", category: "Security",
         desc: "Several ethical hacking courses, starting with Udemy's Learn Ethical Hacking From Scratch, all practised in my own lab (Kali Linux VMs and a Raspberry Pi rig) on machines and networks I own. Network: monitor mode, packet sniffing, deauth, cracking WEP / WPA / WPA2 handshakes, then ARP spoofing, man-in-the-middle with bettercap and Wireshark, DNS spoofing. Systems: recon with Nmap, exploiting services with Metasploit, client-side backdoors and social-engineering awareness, post-exploitation with Meterpreter. Web: information gathering, file upload and code execution flaws, LFI / RFI, SQL injection, XSS, scanning with OWASP ZAP. And the other side: how to detect and defend against each attack. I turned it into the 15-challenge Ascendant CTF.",
         tags: ["Kali Linux", "Wireshark", "Nmap", "Metasploit", "Burp / ZAP", "SQLi / XSS"],
         links: [{ label: "The course", href: "https://www.udemy.com/course/learn-ethical-hacking-from-scratch/" }, { label: "My CTF", href: "https://ascendantctf.vercel.app/" }]
       },
       {
-        title: "Raspberry Pi Lab", year: "Ongoing", category: "Security",
+        wide: true, title: "Raspberry Pi Lab", year: "Ongoing", category: "Security",
         desc: "A pocket hacking rig running Kali Linux for practising Wi-Fi and network attacks on my own network, a Pi-hole that blocks ads for the whole house, a home server / NAS, and a Pi camera + sensor build. Also a Node.js website hosted on the Pi that switches its pins and LEDs from any browser.",
         tags: ["Raspberry Pi", "Kali Linux", "Pi-hole", "Node.js"], link: "#"
       },
@@ -123,7 +123,7 @@ window.CONTENT = {
         tags: ["Arduino", "Bluetooth", "RC", "Autonomous"], link: "#"
       },
       {
-        title: "Android Apps (MIT App Inventor)", year: "2020–21", category: "Apps",
+        wide: true, title: "Android Apps (MIT App Inventor)", year: "2020–21", category: "Apps",
         desc: "Where it started: 20+ Android apps built in lockdown. Best of them: an All-in-One app with video calling through join / create meeting codes on a web page I hosted myself, plus games and settings; Find Me, which reads incoming texts aloud and auto-replies with the phone's GPS location; FlappyCopter, a 750-block side-scroller with collisions and a saved high score; a multi-tool that translates text, listens to your speech and speaks back, with a to-do list and a country / capital / currency lookup; a diary locked behind the fingerprint sensor; plus reminders with real alarms, a paint app that shares drawings, a step counter and a xylophone that records what you play.",
         tags: ["App Inventor", "Android", "GPS + SMS", "Speech", "Games"], link: "https://github.com/Shlok-Sinha/app-inventor-apps"
       },

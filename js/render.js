@@ -143,7 +143,7 @@
   function renderProjects(C) {
     const P = C.projects;
     const grid = h('div', { class: 'proj-grid' },
-      P.items.map((p, i) => h('article', { class: 'proj' + (i === 0 ? ' proj-wide' : ''), 'data-cat': p.category, L: 'box' },
+      P.items.map((p, i) => h('article', { class: 'proj' + (i === 0 || p.wide ? ' proj-wide' : ''), 'data-cat': p.category, L: 'box' },
         h('div', { class: 'proj-top' },
           T('span', 'proj-n', String(i + 1).padStart(2, '0') + ' / ' + p.category.toUpperCase()),
           T('span', 'proj-year', p.year)
