@@ -58,7 +58,7 @@ window.CONTENT = {
     title: "Student by day, builder by every other hour.",
     paragraphs: [
       "I'm Shlok Sinha — a Class 12 student preparing for JEE who spends every spare hour building. My favourite projects are the ones that run my own life: an AI assistant on my own GPU, a study brain that tracks every session and test, a trading bot that never touches real money.",
-      "I learn by building: nobody taught me FPV, CTF design or local LLMs — I read, asked communities, broke things and fixed them. Along the way: 93% in Class X boards, a short course at IIT Hyderabad, several ethical hacking courses (including Udemy's Learn Ethical Hacking From Scratch), and IIM Bangalore's Youth Leadership Program for public speaking.",
+      "I learn by building: nobody taught me FPV, CTF design or local LLMs — I read, asked communities, broke things and fixed them. Along the way: 93% in Class X boards, a short course at IIT Hyderabad, several ethical hacking courses (including Udemy's Learn Ethical Hacking From Scratch), and IIM Bangalore's Youth Leadership Program (one of 20 students) for leadership and public speaking.",
       "I like rules that keep projects honest: Auren must work with zero paid API keys, every Paper Desk setting is logged with the reason it changed, and every CTF flag is hashed so nobody can read it from the page source.",
       "Right now I'm pushing Auren toward a real-life JARVIS that can see the screen and drive a browser, flying (and crashing, and rebuilding) FPV quads, and wiring up Raspberry Pi and Arduino builds — a pocket hacking rig, a keypad lock, an IR + RF remote cloner, cars that drive themselves. I've also written a 7-day Python course for beginners. Off-screen: guitar (Level 5) and chess."
     ],
@@ -68,7 +68,8 @@ window.CONTENT = {
       { year: "Aug '26", title: "Paper Desk + Check-in Bot", desc: "Paper-trading bot with walk-forward backtests; a mood check-in chatbot for school." },
       { year: "Jul '26", title: "Ascendant 2026", desc: "Hosted a school hackathon: websites, a 3-level CTF, 2-day logistics, school + sponsor outreach." },
       { year: "'25", title: "Autonomous FPV build", desc: "After Class 10: taught myself FPV, sourced parts, built a 250 km/h drone with autonomous return-to-home." },
-      { year: "Jun '24", title: "Youth Leadership Program, IIMB", desc: "8-week public speaking program by the IIMB Orators Club; graduated on the IIM Bangalore campus." },
+      { year: "Jun '24", title: "Youth Leadership Program, IIM Bangalore", desc: "One of 20 students (aged 14–18) in the IIMB Orators Club's 8-week leadership and public speaking program; graduated on the IIM Bangalore campus. The program was covered in the IIMB Alumni newsletter.", highlight: true,
+        link: { label: "Read the IIMB feature", href: "https://newsletter.iimbaa.com/iimb-orators-club-event-youth-leadership-program-june-2024/" } },
       { year: "'20–21", title: "20+ Android apps", desc: "Lockdown in MIT App Inventor: video calling, a GPS auto-reply app, games, a translator and a fingerprint-locked diary." },
       { year: "'19", title: "First code", desc: "Minecraft course, then summer coding challenges and an intro AI course." }
     ]

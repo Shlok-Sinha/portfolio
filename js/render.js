@@ -131,9 +131,11 @@
       h('div', { class: 'about-grid' },
         h('div', { class: 'about-text' }, A.paragraphs.map(p => T('p', 'about-p', p))),
         h('ol', { class: 'timeline' },
-          A.timeline.map(t => h('li', { class: 'tl-item', L: 'box' },
+          A.timeline.map(t => h('li', { class: 'tl-item' + (t.highlight ? ' tl-hot' : ''), L: 'box' },
             T('span', 'tl-year', t.year),
-            h('div', null, T('h3', 'tl-title', t.title), T('p', 'tl-desc', t.desc))
+            h('div', null,
+              T('h3', 'tl-title', t.title), T('p', 'tl-desc', t.desc),
+              t.link ? h('a', { class: 'tl-link', href: t.link.href, target: '_blank', rel: 'noopener', L: 'text' }, t.link.label + ' ↗') : null)
           ))
         )
       )

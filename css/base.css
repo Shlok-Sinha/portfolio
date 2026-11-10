@@ -252,6 +252,9 @@ body::after {
 .tl-year { font: 700 13px/1.4 var(--f-mono); color: var(--accent); }
 .tl-title { font-size: 17px; font-weight: 700; }
 .tl-desc { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.tl-link { display: inline-block; margin-top: 10px; font: 700 12px/1 var(--f-mono); color: var(--accent); }
+.tl-link:hover { text-decoration: underline; }
+.tl-hot { border-color: var(--accent-line); background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 10%, var(--card)), var(--card) 70%); }
 
 /* ---------- Projects ---------- */
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: -20px 0 28px; }
