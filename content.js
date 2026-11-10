@@ -33,7 +33,7 @@ window.CONTENT = {
     ctaPrimary: { label: "See the builds →", href: "#projects" },
     ctaSecondary: { label: "Get in touch", href: "#contact" },
     stats: [                       // numbers count up after the build
-      { value: "12", label: "Projects shipped" },
+      { value: "13", label: "Projects shipped" },
       { value: "15", label: "CTF challenges designed" },
       { value: "0", label: "Paid keys Auren needs" }
     ],
@@ -50,7 +50,7 @@ window.CONTENT = {
       { n: "02.", badge: "HOSTED", title: "Ascendant 2026", desc: "Ran a school hackathon + wrote its 15-challenge CTF." },
       { n: "03.", badge: "RTH · 250 KM/H", title: "Autonomous FPV", desc: "Self-built FPV drone with autonomous return-to-home, tops out at 250 km/h." }
     ],
-    marquee: ["Python", "JavaScript", "Ollama", "Claude", "Gemini", "ChromaDB", "Whisper", "React", "Tauri", "Textual", "Alpaca API", "Flask", "MySQL", "Node.js", "Raspberry Pi", "Arduino", "Kali Linux", "Apps Script", "WebGL", "FPV", "Betaflight Blackbox", "Obsidian", "Git"]
+    marquee: ["Python", "JavaScript", "Ollama", "Claude", "Gemini", "ChromaDB", "Whisper", "React", "Tauri", "Textual", "Alpaca API", "Flask", "MySQL", "Node.js", "Raspberry Pi", "Arduino", "Kali Linux", "App Inventor", "Apps Script", "WebGL", "FPV", "Betaflight Blackbox", "Obsidian", "Git"]
   },
 
   about: {
@@ -69,6 +69,7 @@ window.CONTENT = {
       { year: "Jul '26", title: "Ascendant 2026", desc: "Hosted a school hackathon: websites, a 3-level CTF, 2-day logistics, school + sponsor outreach." },
       { year: "'25", title: "Autonomous FPV build", desc: "After Class 10: taught myself FPV, sourced parts, built a 250 km/h drone with autonomous return-to-home." },
       { year: "Jun '24", title: "Youth Leadership Program, IIMB", desc: "8-week public speaking program by the IIMB Orators Club; graduated on the IIM Bangalore campus." },
+      { year: "'20–21", title: "20+ Android apps", desc: "Lockdown in MIT App Inventor: video calling, a GPS auto-reply app, games, a translator and a fingerprint-locked diary." },
       { year: "'19", title: "First code", desc: "Minecraft course, then summer coding challenges and an intro AI course." }
     ]
   },
@@ -77,7 +78,7 @@ window.CONTENT = {
     eyebrow: "// Projects",
     title: "Things I've built",
     subtitle: "Real projects, mostly built to solve my own problems.",
-    filters: ["All", "AI", "Web", "Hardware", "Security", "Finance", "School"],
+    filters: ["All", "AI", "Web", "Hardware", "Security", "Apps", "Finance", "School"],
     items: [                       // [edit] add GitHub / live links in `link`
       {
         title: "Auren", year: "2026", category: "AI",
@@ -120,6 +121,11 @@ window.CONTENT = {
         title: "Cars", year: "Ongoing", category: "Hardware",
         desc: "A phone-controlled Bluetooth car, an RC car built from parts (ESC, motor, servo, receiver), and two that drive themselves: an obstacle-avoider with an ultrasonic sensor and a line follower.",
         tags: ["Arduino", "Bluetooth", "RC", "Autonomous"], link: "#"
+      },
+      {
+        title: "Android Apps (MIT App Inventor)", year: "2020–21", category: "Apps",
+        desc: "Where it started: 20+ Android apps built in lockdown. Best of them: an All-in-One app with video calling through join / create meeting codes on a web page I hosted myself, plus games and settings; Find Me, which reads incoming texts aloud and auto-replies with the phone's GPS location; FlappyCopter, a 750-block side-scroller with collisions and a saved high score; a multi-tool that translates text, listens to your speech and speaks back, with a to-do list and a country / capital / currency lookup; a diary locked behind the fingerprint sensor; plus reminders with real alarms, a paint app that shares drawings, a step counter and a xylophone that records what you play.",
+        tags: ["App Inventor", "Android", "GPS + SMS", "Speech", "Games"], link: "#"
       },
       {
         title: "Paper Desk", year: "2026", category: "Finance",
